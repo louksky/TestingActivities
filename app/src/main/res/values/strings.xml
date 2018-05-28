@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestingActivities</string>
+    <string name="Bdays">Bdays</string>
+    <string name="Add">Add</string>
+    <string name="Name">Name</string>
+    <string name="Date">Date</string>
+</resources>
