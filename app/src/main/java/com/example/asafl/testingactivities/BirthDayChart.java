@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class BirthDayChart extends AppCompatActivity {
@@ -38,13 +40,19 @@ public class BirthDayChart extends AppCompatActivity {
 
                 sb.setLength(0);
                 for (CaptainsLogEntity cle : newLog) {
-                    calendar.setTimeInMillis(cle.time);
-                    sb.append(formatter.format(calendar.getTime()));
+                    sb.append(cle.date);
                     sb.append(": ");
-                    sb.append(cle.log);
+                    sb.append(cle.name);
                     sb.append('\n');
                 }
-
+                Collections.sort(newLog, new Comparator() {
+                    @Override
+                    public int compare(Object o1, Object o2) {
+                        CaptainsLogEntity p1 = (CaptainsLogEntity) o1;
+                        CaptainsLogEntity p2 = (CaptainsLogEntity) o2;
+                        return p1.getLog().compareToIgnoreCase(p2.getLog());
+                    }
+                });
                 logOutputText.setText(sb);
             }
         };

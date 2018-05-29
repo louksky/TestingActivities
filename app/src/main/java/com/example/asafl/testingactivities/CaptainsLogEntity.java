@@ -6,27 +6,27 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity
 public class CaptainsLogEntity {
     @PrimaryKey(autoGenerate = true) int id;
-    long time;
-    String log;
+    String date;
+    String name;
 
     public void setLog(String text) {
-        log = text;
+        name = text;
 //        time = System.currentTimeMillis();
     }
 
     public String getLog() {
-        return log;
+        return name;
     }
 
     public int getID() {
         return id;
     }
 
-    public long getTime() {
-        return time;
+    public String getTime() {
+        return date;
     }
 
-    public void setTime(long t) {
-        time = t;
+    public void setTime(String t) {
+        date = t;
     }
 }

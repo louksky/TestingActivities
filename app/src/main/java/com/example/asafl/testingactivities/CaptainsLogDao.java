@@ -9,7 +9,7 @@ import java.util.List;
 
 @Dao
 public interface CaptainsLogDao {
-    @Query("select id, time, log from CaptainsLogEntity;")
+    @Query("select id, date, name from CaptainsLogEntity;")
     LiveData<List<CaptainsLogEntity>> loadCaptainsLog();
 
     @Insert

@@ -44,8 +44,12 @@ public class pinkiball {
     public void move(int maxH, int maxW){
         //todo: check if we hit boundaries/tangela
         if ( x >=r.left&&x<=r.right &&  y <=r.bottom&&y>=r.top){
-            yDirection *=-1;
-            xDirection *= -1;
+
+
+                yDirection *=-1;
+                xDirection *= -1;
+
+
         }
         if (y >= maxH || y < 0 )
             yDirection *= -1;

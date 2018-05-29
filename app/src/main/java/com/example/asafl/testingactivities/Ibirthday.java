@@ -23,7 +23,7 @@ public class Ibirthday extends AppCompatActivity {
             CaptainsLogEntity logEntity = new CaptainsLogEntity();
             logEntity.setLog(text);
 //            logEntity.setTime(Long.(text2));
-            logEntity.setTime(20021998);
+            logEntity.setTime("1/2/2017");
             CaptainsLogDb.getInstance(this).writeToCaptainsLog(logEntity);
             name.clearComposingText();
             birth.clearComposingText();
